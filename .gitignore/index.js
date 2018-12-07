@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-var PREFIX = "&";
+var PREFIX = "!";
 var bot = new Discord.Client();
 
 bot.on("ready", function(){
@@ -10,7 +10,7 @@ bot.on("ready", function(){
 bot.on("message", async function(message) {
     if (message.author.equals(bot.user)) return;
 
-    if (&message.content.startsWith(PREFIX)) return;
+    if (!message.content.startsWith(PREFIX)) return;
 
     var args = message.content.substring(PREFIXlenght).split(" ");
     switch(args[0].toLowerCase()) {
@@ -22,7 +22,7 @@ bot.on("message", async function(message) {
                 title: '',
                 fields [{
                     name : "Link"
-                    value:""
+                    value:"testee"
                     inline: false
                 }],
                 footer: {
