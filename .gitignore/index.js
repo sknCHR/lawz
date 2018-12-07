@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 var PREFIX = "!";
 var bot = new Discord.Client();
 
-bot.on("ready", function(){
+bot.on("ready", function() {
     bot.user.setGame("Teste");
     console.log("Bot is ready");
 });
@@ -20,9 +20,9 @@ bot.on("message", async function(message) {
                 color: 0xFF0000,
                 author: message.author.name,
                 title: '',
-                fields [{
+                fields: [{
                     name : "Link"
-                    value:"testee"
+                    value: "testee"
                     inline: false
                 }],
                 footer: {
